@@ -17,18 +17,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '22'  # Use the Node.js version required by Astro
-        
-      - name: Install Bun
-        run: curl -fsSL https://bun.sh/install | bash
-        
-      - name: Sourcing Bun from RC Files   
-        run: source /home/runner/.bashrc
 
       - name: Install dependencies
-        run: bun install
+        run: npm install
 
       - name: Build Astro site
-        run: bun run build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

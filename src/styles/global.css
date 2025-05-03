@@ -5,7 +5,6 @@
  */
 
  @import 'tailwindcss';
- @plugin '@tailwindcss/typography';
 
 :root {
 	--accent: #2337ff;
